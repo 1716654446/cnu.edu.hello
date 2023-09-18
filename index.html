@@ -13,6 +13,17 @@
 <h2>下拉可以刷新，进行网页的重置</h2>
 <h2>注意：如果内网使用不了，请刷新后重新登录</h2>
 <input type="button" value="点击查看今年校历" onclick="window.location.href='https://1716654446.github.io/cnu.edu.hello/1.jpg'" >
+<h2>下面一个按钮可以保存类似像课表的文件用于方便查看</h2>
+<input type="file" id="files" >
+<img src="" alt="" id="imgs">
+<script>
+    let files =document.getElementById('files')
+    let imgs =document.getElementById('imgs')
+
+    files.onchange = function (){
+        imgs.src = URL.createObjectURL(this.files[0])
+    }
+</script>
 <h1>生活小tips</h1>
 <h2>食堂开放时间</h2>
 <h3>早餐6：30-8：45</h3>
